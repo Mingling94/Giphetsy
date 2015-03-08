@@ -18,12 +18,12 @@ router.get('/', function(req, res, next) {
     var r4 = randomWords();
     var r5 = randomWords();
     var r6 = randomWords();
-    console.log(r1 + ' ' +
-                r2 + ' ' +
-                r3 + ' ' +
-                r4 + ' ' +
-                r5 + ' ' +
-                r6
+    console.log("1. " + r1 + '\n' +
+                "2. " + r2 + '\n' +
+                "3. " + r3 + '\n' +
+                "4. " + r4 + '\n' +
+                "5. " + r5 + '\n' +
+                "6. " + r6 + '\n'
     );
 
     getImage(r1,function(result){
@@ -78,9 +78,9 @@ function getImage(tag,callback){
             var images = obj2.images;
             var fixed_height = images.fixed_height;
             var url = fixed_height.url;
-            console.log("callback about to execute");
+            //console.log("callback about to execute");
             callback(url);
-            console.log("url was " + url);
+            //console.log("url was " + url);
         }
     })
 }
